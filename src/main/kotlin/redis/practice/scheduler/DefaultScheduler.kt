@@ -7,15 +7,19 @@ import org.springframework.stereotype.Component
 
 @Component
 class DefaultScheduler {
-    @Scheduled(fixedDelayString = "60000")
+    /**
+     * 스케줄러와 lock은 별개로 동작
+     * 스케줄러 주기가 더 빠르다면 lock에 걸려 작동하지 않는다.
+     **/
+    @Scheduled(fixedDelayString = "5000")
     @SchedulerLock(
         lockAtMostFor = "1m",
         lockAtLeastFor = "1m",
-        name = "EXAMPLE"
+        name = "EXAMPLE",
     )
     fun example() {
         kLogger.info { "scheduler start" }
-        Thread.sleep(50000)
+        Thread.sleep(5000)
         kLogger.info { "scheduler end" }
     }
 

@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.redis.connection.RedisConnectionFactory
 
-
 @Configuration
 /**
  * 기본적으로 잠기는 시간
@@ -16,7 +15,5 @@ import org.springframework.data.redis.connection.RedisConnectionFactory
 @EnableSchedulerLock(defaultLockAtMostFor = "2m")
 class SchedulerLockConfig {
     @Bean
-    fun lockProvider(connectionFactory: RedisConnectionFactory): LockProvider {
-        return RedisLockProvider(connectionFactory)
-    }
+    fun lockProvider(connectionFactory: RedisConnectionFactory): LockProvider = RedisLockProvider(connectionFactory)
 }
