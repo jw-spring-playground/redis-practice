@@ -8,3 +8,9 @@ spring:
 logging:
   level:
     net.javacrumbs.shedlock: debug
+scheduler:
+  example:
+    delay-millisecond: ${EXAMPLE_DELAY_MILLISECOND:5000}
+    lock-at-most-for: ${EXAMPLE_LOCK_AT_MOST_FOR:1m}
+    lock-at-least-for: ${EXAMPLE_LOCK_AT_LEAST_FOR:1m}
+    lock-name: ${EXAMPLE_LOCK_NAME:EXAMPLE}
