@@ -1,0 +1,10 @@
+spring:
+  data:
+    redis:
+      host: localhost
+      database: 0
+      timeout: 2000
+      port: 6379
+logging:
+  level:
+    net.javacrumbs.shedlock: debug
