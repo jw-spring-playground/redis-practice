@@ -10,6 +10,7 @@ class DefaultScheduler {
     /**
      * 스케줄러와 lock은 별개로 동작
      * 스케줄러 주기가 더 빠르다면 lock에 걸려 작동하지 않는다.
+     * lockAtLeastFor를 설정하지 않았다면 task가 끝나면 lock 해제
      **/
     @Scheduled(fixedDelayString = "5000")
     @SchedulerLock(
