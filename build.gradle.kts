@@ -33,6 +33,8 @@ dependencies {
 
     // logging
     implementation("io.github.oshai:kotlin-logging-jvm:7.0.7")
+    // aspect
+    implementation("org.aspectj:aspectjweaver:1.9.24")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
