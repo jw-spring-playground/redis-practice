@@ -2,8 +2,8 @@ package redis.practice.distributelock.properties
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 
-@ConfigurationProperties(prefix = "spring.data")
+@ConfigurationProperties(prefix = "spring.data.redis")
 data class RedisProperties(
-    val redisPort: Int,
-    val redisHost: String,
+    val port: Int,
+    val host: String,
 )

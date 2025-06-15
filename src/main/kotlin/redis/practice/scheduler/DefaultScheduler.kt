@@ -18,7 +18,7 @@ class DefaultScheduler {
     @Scheduled(fixedDelayString = "\${scheduler.example.delay-millisecond}")
     @SchedulerLock(
         lockAtMostFor = "\${scheduler.example.lock-at-most-for}",
-        lockAtLeastFor = "\${scheduler.example.lock-at-least-for}",
+//        lockAtLeastFor = "\${scheduler.example.lock-at-least-for}",
         name = "\${scheduler.example.lock-name}",
     )
     fun example() {

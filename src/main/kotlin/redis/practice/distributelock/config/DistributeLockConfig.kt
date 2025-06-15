@@ -20,7 +20,7 @@ class DistributeLockConfig(
      **/
     @Bean
     fun redissonClient(): RedissonClient {
-        val redisAddress = "${REDIS_ADDRESS_PREFIX}${redisProperties.redisHost}:${redisProperties.redisPort}"
+        val redisAddress = "${REDIS_ADDRESS_PREFIX}${redisProperties.host}:${redisProperties.port}"
         val config = Config()
         config.useSingleServer().setAddress(redisAddress)
 
